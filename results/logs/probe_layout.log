@@ -1,0 +1,8 @@
+strided q stride (175718400, 128, 5120, 1) contiguous q stride (175718400, 4392960, 128, 1)
+self strided vs contiguous: max_abs_diff 0.000e+00
+self  contiguous (B,H,S,D)          400.9 ms    60.2 TFLOPS
+self  strided view (DiffSynth)     1195.8 ms    20.2 TFLOPS
+self  view + .contiguous()          432.5 ms    55.8 TFLOPS
+cross strided view (DiffSynth)        9.5 ms    38.1 TFLOPS
+cross view + .contiguous()           11.3 ms    32.0 TFLOPS
+LAYOUT_OK

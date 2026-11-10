@@ -1,0 +1,9 @@
+{
+ "cmd": [
+  "bash",
+  "/workspace/src/radeon/train_control_1gpu.sh"
+ ],
+ "returncode": 0,
+ "wall_s": 427.5,
+ "peak_rss_gib": 13.66
+}

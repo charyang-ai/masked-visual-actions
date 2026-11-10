@@ -1,0 +1,6 @@
+patch already applied: diffsynth-wan-sdpa-contiguous.patch
+patch applied: diffsynth-wan-vae-attention-math.patch
+torch 2.11.0+rocm7.14.0 hip 7.14.60850 devices 1 AMD Radeon Pro W7900D
+transformers 4.57.6 diffsynth /workspace/DiffSynth-Studio/diffsynth/__init__.py
+attention: flash_attn3 False flash_attn2 False sageattention False -> torch SDPA
+SETUP_OK

@@ -1,0 +1,84 @@
+To avoid repeatedly downloading model files, (PAI/Wan2.2-Fun-A14B-Control, models_t5_umt5-xxl-enc-bf16.pth) is redirected to ('DiffSynth-Studio/Wan-Series-Converted-Safetensors', 'models_t5_umt5-xxl-enc-bf16.safetensors'). You can use `redirect_common_files=False` to disable file redirection.
+To avoid repeatedly downloading model files, (PAI/Wan2.2-Fun-A14B-Control, Wan2.1_VAE.pth) is redirected to ('DiffSynth-Studio/Wan-Series-Converted-Safetensors', 'Wan2.1_VAE.safetensors'). You can use `redirect_common_files=False` to disable file redirection.
+Loading models from: "/workspace/models/PAI/Wan2.2-Fun-A14B-Control/high_noise_model/diffusion_pytorch_model.safetensors"
+Loaded model: {
+    "model_name": "wan_video_dit",
+    "model_class": "diffsynth.models.wan_video_dit.WanModel",
+    "extra_kwargs": {
+        "has_image_input": false,
+        "patch_size": [
+            1,
+            2,
+            2
+        ],
+        "in_dim": 52,
+        "dim": 5120,
+        "ffn_dim": 13824,
+        "freq_dim": 256,
+        "text_dim": 4096,
+        "out_dim": 16,
+        "num_heads": 40,
+        "num_layers": 40,
+        "eps": 1e-06,
+        "has_ref_conv": true,
+        "require_clip_embedding": false
+    }
+}
+Loading models from: "/workspace/models/PAI/Wan2.2-Fun-A14B-Control/low_noise_model/diffusion_pytorch_model.safetensors"
+Loaded model: {
+    "model_name": "wan_video_dit",
+    "model_class": "diffsynth.models.wan_video_dit.WanModel",
+    "extra_kwargs": {
+        "has_image_input": false,
+        "patch_size": [
+            1,
+            2,
+            2
+        ],
+        "in_dim": 52,
+        "dim": 5120,
+        "ffn_dim": 13824,
+        "freq_dim": 256,
+        "text_dim": 4096,
+        "out_dim": 16,
+        "num_heads": 40,
+        "num_layers": 40,
+        "eps": 1e-06,
+        "has_ref_conv": true,
+        "require_clip_embedding": false
+    }
+}
+Loading models from: "/workspace/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/models_t5_umt5-xxl-enc-bf16.safetensors"
+Loaded model: {
+    "model_name": "wan_video_text_encoder",
+    "model_class": "diffsynth.models.wan_video_text_encoder.WanTextEncoder",
+    "extra_kwargs": null
+}
+Loading models from: "/workspace/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/Wan2.1_VAE.safetensors"
+Loaded model: {
+    "model_name": "wan_video_vae",
+    "model_class": "diffsynth.models.wan_video_vae.WanVideoVAE",
+    "extra_kwargs": null
+}
+Using wan_video_text_encoder from "/workspace/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/models_t5_umt5-xxl-enc-bf16.safetensors".
+More than one wan_video_dit models are loaded: ['/workspace/models/PAI/Wan2.2-Fun-A14B-Control/high_noise_model/diffusion_pytorch_model.safetensors', '/workspace/models/PAI/Wan2.2-Fun-A14B-Control/low_noise_model/diffusion_pytorch_model.safetensors']. Using wan_video_dit from [
+    "/workspace/models/PAI/Wan2.2-Fun-A14B-Control/high_noise_model/diffusion_pytorch_model.safetensors",
+    "/workspace/models/PAI/Wan2.2-Fun-A14B-Control/low_noise_model/diffusion_pytorch_model.safetensors"
+].
+Using wan_video_vae from "/workspace/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/Wan2.1_VAE.safetensors".
+No wan_video_image_encoder models available. This is not an error.
+No wan_video_motion_controller models available. This is not an error.
+No wan_video_vace models available. This is not an error.
+No wan_video_vap models available. This is not an error.
+No wans2v_audio_encoder models available. This is not an error.
+No wan_video_animate_adapter models available. This is not an error.
+400 tensors are patched by LoRA. You can use `pipe.clear_lora()` to clear all LoRA layers.
+400 tensors are patched by LoRA. You can use `pipe.clear_lora()` to clear all LoRA layers.
+VAE encoding:   0%|          | 0/9 [00:00<?, ?it/s]MIOpen(HIP): Warning [ParseAndLoadDb] File is unreadable: "/opt/venv/lib/python3.12/site-packages/_rocm_sdk_libraries/share/miopen/db/gfx1100_48.HIP.fdb.txt"
+VAE encoding:  11%|█         | 1/9 [00:03<00:24,  3.07s/it]VAE encoding:  22%|██▏       | 2/9 [00:04<00:13,  1.97s/it]VAE encoding:  33%|███▎      | 3/9 [00:05<00:09,  1.62s/it]VAE encoding:  44%|████▍     | 4/9 [00:06<00:07,  1.45s/it]VAE encoding:  56%|█████▌    | 5/9 [00:07<00:05,  1.36s/it]VAE encoding:  67%|██████▋   | 6/9 [00:09<00:03,  1.30s/it]VAE encoding:  78%|███████▊  | 7/9 [00:10<00:02,  1.28s/it]VAE encoding:  89%|████████▉ | 8/9 [00:11<00:01,  1.25s/it]VAE encoding: 100%|██████████| 9/9 [00:12<00:00,  1.23s/it]VAE encoding: 100%|██████████| 9/9 [00:12<00:00,  1.41s/it]
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:50<40:51, 50.02s/it]  4%|▍         | 2/50 [02:05<51:58, 64.97s/it]  6%|▌         | 3/50 [03:20<54:30, 69.59s/it]  8%|▊         | 4/50 [04:35<55:06, 71.88s/it] 10%|█         | 5/50 [05:51<54:56, 73.25s/it] 12%|█▏        | 6/50 [07:08<54:30, 74.34s/it] 14%|█▍        | 7/50 [08:23<53:37, 74.82s/it] 16%|█▌        | 8/50 [09:39<52:33, 75.08s/it] 18%|█▊        | 9/50 [10:55<51:26, 75.28s/it] 20%|██        | 10/50 [12:10<50:16, 75.41s/it] 22%|██▏       | 11/50 [13:26<49:07, 75.58s/it] 24%|██▍       | 12/50 [14:42<47:55, 75.68s/it] 26%|██▌       | 13/50 [15:59<46:46, 75.85s/it] 28%|██▊       | 14/50 [17:15<45:35, 76.00s/it] 30%|███       | 15/50 [18:31<44:24, 76.13s/it] 32%|███▏      | 16/50 [19:48<43:08, 76.14s/it] 34%|███▍      | 17/50 [21:04<41:55, 76.21s/it] 36%|███▌      | 18/50 [22:19<40:28, 75.90s/it] 38%|███▊      | 19/50 [23:34<39:08, 75.75s/it] 40%|████      | 20/50 [24:50<37:46, 75.55s/it] 42%|████▏     | 21/50 [26:05<36:30, 75.53s/it] 44%|████▍     | 22/50 [27:33<37:00, 79.29s/it] 46%|████▌     | 23/50 [28:54<35:50, 79.64s/it] 48%|████▊     | 24/50 [30:09<33:55, 78.28s/it] 50%|█████     | 25/50 [31:24<32:14, 77.40s/it] 52%|█████▏    | 26/50 [32:39<30:40, 76.67s/it] 54%|█████▍    | 27/50 [33:54<29:10, 76.11s/it] 56%|█████▌    | 28/50 [35:08<27:45, 75.69s/it] 58%|█████▊    | 29/50 [36:23<26:22, 75.37s/it] 60%|██████    | 30/50 [37:38<25:03, 75.16s/it] 62%|██████▏   | 31/50 [38:53<23:46, 75.08s/it] 64%|██████▍   | 32/50 [40:08<22:30, 75.04s/it] 66%|██████▌   | 33/50 [41:23<21:18, 75.18s/it] 68%|██████▊   | 34/50 [42:39<20:07, 75.45s/it] 70%|███████   | 35/50 [43:55<18:52, 75.51s/it] 72%|███████▏  | 36/50 [45:10<17:37, 75.54s/it] 74%|███████▍  | 37/50 [46:26<16:23, 75.64s/it] 76%|███████▌  | 38/50 [47:42<15:08, 75.69s/it] 78%|███████▊  | 39/50 [48:57<13:49, 75.43s/it] 80%|████████  | 40/50 [50:12<12:33, 75.38s/it] 82%|████████▏ | 41/50 [51:28<11:18, 75.42s/it] 84%|████████▍ | 42/50 [52:44<10:04, 75.53s/it] 86%|████████▌ | 43/50 [53:59<08:49, 75.62s/it] 88%|████████▊ | 44/50 [55:15<07:33, 75.66s/it] 90%|█████████ | 45/50 [56:31<06:17, 75.58s/it] 92%|█████████▏| 46/50 [57:46<05:02, 75.54s/it] 94%|█████████▍| 47/50 [59:02<03:46, 75.65s/it] 96%|█████████▌| 48/50 [1:00:18<02:31, 75.79s/it] 98%|█████████▊| 49/50 [1:01:34<01:15, 75.74s/it]100%|██████████| 50/50 [1:02:49<00:00, 75.72s/it]100%|██████████| 50/50 [1:02:49<00:00, 75.40s/it]
+VAE decoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE decoding:  11%|█         | 1/9 [00:02<00:17,  2.16s/it]VAE decoding:  22%|██▏       | 2/9 [00:04<00:14,  2.09s/it]VAE decoding:  33%|███▎      | 3/9 [00:06<00:12,  2.07s/it]VAE decoding:  44%|████▍     | 4/9 [00:08<00:10,  2.06s/it]VAE decoding:  56%|█████▌    | 5/9 [00:10<00:08,  2.05s/it]VAE decoding:  67%|██████▋   | 6/9 [00:12<00:06,  2.05s/it]VAE decoding:  78%|███████▊  | 7/9 [00:14<00:04,  2.05s/it]VAE decoding:  89%|████████▉ | 8/9 [00:16<00:02,  2.05s/it]VAE decoding: 100%|██████████| 9/9 [00:18<00:00,  2.05s/it]VAE decoding: 100%|██████████| 9/9 [00:18<00:00,  2.06s/it]
+Saving video:   0%|          | 0/81 [00:00<?, ?it/s]Saving video:   1%|          | 1/81 [00:00<00:25,  3.16it/s]Saving video:  81%|████████▏ | 66/81 [00:00<00:00, 203.60it/s]Saving video: 100%|██████████| 81/81 [00:00<00:00, 184.54it/s]
+Saved /workspace/results/full_towel_50step_final/towel.mp4
+Saving video:   0%|          | 0/81 [00:00<?, ?it/s]Saving video:   1%|          | 1/81 [00:00<00:38,  2.06it/s]Saving video:  73%|███████▎  | 59/81 [00:00<00:00, 133.31it/s]Saving video: 100%|██████████| 81/81 [00:00<00:00, 130.66it/s]
+TIMED rc=0 wall=3856.9s peak_rss=7.68GiB

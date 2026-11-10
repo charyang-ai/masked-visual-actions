@@ -1,0 +1,9 @@
+/opt/venv/lib/python3.12/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/venv/lib/python3.12/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+MIOpen(HIP): Warning [ParseAndLoadDb] File is unreadable: "/opt/venv/lib/python3.12/site-packages/_rocm_sdk_libraries/share/miopen/db/gfx1100_48.HIP.fdb.txt"
+ours_vs_gt               PSNR  23.60  SSIM 0.887  LPIPS 0.1729
+upstream_vs_gt           PSNR  22.84  SSIM 0.876  LPIPS 0.1694
+ours_vs_upstream         PSNR  24.43  SSIM 0.901  LPIPS 0.1386
+static_reference_vs_gt   PSNR  20.02  SSIM 0.861  LPIPS 0.2487

@@ -1,0 +1,96 @@
+=== full_towel_50step_sdpa_contiguous sample=towel steps=50 2026-11-10T17:51:07+00:00
+To avoid repeatedly downloading model files, (PAI/Wan2.2-Fun-A14B-Control, models_t5_umt5-xxl-enc-bf16.pth) is redirected to ('DiffSynth-Studio/Wan-Series-Converted-Safetensors', 'models_t5_umt5-xxl-enc-bf16.safetensors'). You can use `redirect_common_files=False` to disable file redirection.
+To avoid repeatedly downloading model files, (PAI/Wan2.2-Fun-A14B-Control, Wan2.1_VAE.pth) is redirected to ('DiffSynth-Studio/Wan-Series-Converted-Safetensors', 'Wan2.1_VAE.safetensors'). You can use `redirect_common_files=False` to disable file redirection.
+Loading models from: "/workspace/models/PAI/Wan2.2-Fun-A14B-Control/high_noise_model/diffusion_pytorch_model.safetensors"
+Loaded model: {
+    "model_name": "wan_video_dit",
+    "model_class": "diffsynth.models.wan_video_dit.WanModel",
+    "extra_kwargs": {
+        "has_image_input": false,
+        "patch_size": [
+            1,
+            2,
+            2
+        ],
+        "in_dim": 52,
+        "dim": 5120,
+        "ffn_dim": 13824,
+        "freq_dim": 256,
+        "text_dim": 4096,
+        "out_dim": 16,
+        "num_heads": 40,
+        "num_layers": 40,
+        "eps": 1e-06,
+        "has_ref_conv": true,
+        "require_clip_embedding": false
+    }
+}
+Loading models from: "/workspace/models/PAI/Wan2.2-Fun-A14B-Control/low_noise_model/diffusion_pytorch_model.safetensors"
+Loaded model: {
+    "model_name": "wan_video_dit",
+    "model_class": "diffsynth.models.wan_video_dit.WanModel",
+    "extra_kwargs": {
+        "has_image_input": false,
+        "patch_size": [
+            1,
+            2,
+            2
+        ],
+        "in_dim": 52,
+        "dim": 5120,
+        "ffn_dim": 13824,
+        "freq_dim": 256,
+        "text_dim": 4096,
+        "out_dim": 16,
+        "num_heads": 40,
+        "num_layers": 40,
+        "eps": 1e-06,
+        "has_ref_conv": true,
+        "require_clip_embedding": false
+    }
+}
+Loading models from: "/workspace/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/models_t5_umt5-xxl-enc-bf16.safetensors"
+Loaded model: {
+    "model_name": "wan_video_text_encoder",
+    "model_class": "diffsynth.models.wan_video_text_encoder.WanTextEncoder",
+    "extra_kwargs": null
+}
+Loading models from: "/workspace/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/Wan2.1_VAE.safetensors"
+Loaded model: {
+    "model_name": "wan_video_vae",
+    "model_class": "diffsynth.models.wan_video_vae.WanVideoVAE",
+    "extra_kwargs": null
+}
+Using wan_video_text_encoder from "/workspace/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/models_t5_umt5-xxl-enc-bf16.safetensors".
+More than one wan_video_dit models are loaded: ['/workspace/models/PAI/Wan2.2-Fun-A14B-Control/high_noise_model/diffusion_pytorch_model.safetensors', '/workspace/models/PAI/Wan2.2-Fun-A14B-Control/low_noise_model/diffusion_pytorch_model.safetensors']. Using wan_video_dit from [
+    "/workspace/models/PAI/Wan2.2-Fun-A14B-Control/high_noise_model/diffusion_pytorch_model.safetensors",
+    "/workspace/models/PAI/Wan2.2-Fun-A14B-Control/low_noise_model/diffusion_pytorch_model.safetensors"
+].
+Using wan_video_vae from "/workspace/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/Wan2.1_VAE.safetensors".
+No wan_video_image_encoder models available. This is not an error.
+No wan_video_motion_controller models available. This is not an error.
+No wan_video_vace models available. This is not an error.
+No wan_video_vap models available. This is not an error.
+No wans2v_audio_encoder models available. This is not an error.
+No wan_video_animate_adapter models available. This is not an error.
+400 tensors are patched by LoRA. You can use `pipe.clear_lora()` to clear all LoRA layers.
+400 tensors are patched by LoRA. You can use `pipe.clear_lora()` to clear all LoRA layers.
+VAE encoding:   0%|          | 0/9 [00:00<?, ?it/s]MIOpen(HIP): Warning [ParseAndLoadDb] File is unreadable: "/opt/venv/lib/python3.12/site-packages/_rocm_sdk_libraries/share/miopen/db/gfx1100_48.HIP.fdb.txt"
+VAE encoding:  11%|█         | 1/9 [00:02<00:22,  2.75s/it]VAE encoding:  22%|██▏       | 2/9 [00:04<00:13,  1.92s/it]VAE encoding:  33%|███▎      | 3/9 [00:05<00:09,  1.62s/it]VAE encoding:  44%|████▍     | 4/9 [00:06<00:07,  1.45s/it]VAE encoding:  56%|█████▌    | 5/9 [00:07<00:05,  1.35s/it]VAE encoding:  67%|██████▋   | 6/9 [00:08<00:03,  1.30s/it]VAE encoding:  78%|███████▊  | 7/9 [00:10<00:02,  1.26s/it]VAE encoding:  89%|████████▉ | 8/9 [00:11<00:01,  1.24s/it]VAE encoding: 100%|██████████| 9/9 [00:12<00:00,  1.22s/it]VAE encoding: 100%|██████████| 9/9 [00:12<00:00,  1.38s/it]
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:48<39:18, 48.14s/it]  4%|▍         | 2/50 [02:02<51:04, 63.84s/it]  6%|▌         | 3/50 [03:18<54:09, 69.15s/it]  8%|▊         | 4/50 [04:33<54:55, 71.64s/it] 10%|█         | 5/50 [05:49<54:55, 73.24s/it] 12%|█▏        | 6/50 [07:05<54:18, 74.06s/it] 14%|█▍        | 7/50 [08:23<53:52, 75.18s/it] 16%|█▌        | 8/50 [09:38<52:42, 75.31s/it] 18%|█▊        | 9/50 [10:53<51:26, 75.29s/it] 20%|██        | 10/50 [12:09<50:11, 75.29s/it] 22%|██▏       | 11/50 [13:24<48:56, 75.31s/it] 24%|██▍       | 12/50 [14:39<47:40, 75.29s/it] 26%|██▌       | 13/50 [15:56<46:36, 75.58s/it] 28%|██▊       | 14/50 [17:11<45:21, 75.60s/it] 30%|███       | 15/50 [18:26<44:01, 75.49s/it] 32%|███▏      | 16/50 [19:43<42:56, 75.79s/it] 34%|███▍      | 17/50 [20:59<41:46, 75.95s/it] 36%|███▌      | 18/50 [22:16<40:33, 76.05s/it] 38%|███▊      | 19/50 [23:32<39:22, 76.21s/it] 40%|████      | 20/50 [24:48<38:03, 76.12s/it] 42%|████▏     | 21/50 [26:04<36:47, 76.14s/it] 44%|████▍     | 22/50 [27:36<37:44, 80.87s/it] 46%|████▌     | 23/50 [28:52<35:41, 79.33s/it] 48%|████▊     | 24/50 [30:08<33:59, 78.43s/it] 50%|█████     | 25/50 [31:24<32:17, 77.50s/it] 52%|█████▏    | 26/50 [32:39<30:47, 76.98s/it] 54%|█████▍    | 27/50 [33:55<29:22, 76.63s/it] 56%|█████▌    | 28/50 [35:11<28:02, 76.48s/it] 58%|█████▊    | 29/50 [36:27<26:43, 76.34s/it] 60%|██████    | 30/50 [37:43<25:25, 76.30s/it] 62%|██████▏   | 31/50 [38:59<24:06, 76.14s/it] 64%|██████▍   | 32/50 [40:15<22:50, 76.12s/it] 66%|██████▌   | 33/50 [41:31<21:33, 76.09s/it] 68%|██████▊   | 34/50 [42:47<20:16, 76.02s/it] 70%|███████   | 35/50 [44:03<19:00, 76.01s/it] 72%|███████▏  | 36/50 [45:19<17:44, 76.05s/it] 74%|███████▍  | 37/50 [46:36<16:30, 76.16s/it] 76%|███████▌  | 38/50 [47:52<15:13, 76.13s/it] 78%|███████▊  | 39/50 [49:08<13:57, 76.17s/it] 80%|████████  | 40/50 [50:24<12:40, 76.09s/it] 82%|████████▏ | 41/50 [51:40<11:25, 76.17s/it] 84%|████████▍ | 42/50 [52:57<10:09, 76.22s/it] 86%|████████▌ | 43/50 [54:13<08:53, 76.22s/it] 88%|████████▊ | 44/50 [55:29<07:37, 76.22s/it] 90%|█████████ | 45/50 [56:45<06:21, 76.21s/it] 92%|█████████▏| 46/50 [58:01<05:04, 76.15s/it] 94%|█████████▍| 47/50 [59:17<03:48, 76.16s/it] 96%|█████████▌| 48/50 [1:00:34<02:32, 76.16s/it] 98%|█████████▊| 49/50 [1:01:50<01:16, 76.14s/it]100%|██████████| 50/50 [1:03:06<00:00, 76.16s/it]100%|██████████| 50/50 [1:03:06<00:00, 75.73s/it]
+VAE decoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE decoding:  11%|█         | 1/9 [00:02<00:17,  2.17s/it]VAE decoding:  22%|██▏       | 2/9 [00:04<00:14,  2.11s/it]VAE decoding:  33%|███▎      | 3/9 [00:06<00:12,  2.08s/it]VAE decoding:  44%|████▍     | 4/9 [00:08<00:10,  2.06s/it]VAE decoding:  56%|█████▌    | 5/9 [00:10<00:08,  2.05s/it]VAE decoding:  67%|██████▋   | 6/9 [00:12<00:06,  2.05s/it]VAE decoding:  78%|███████▊  | 7/9 [00:14<00:04,  2.05s/it]VAE decoding:  89%|████████▉ | 8/9 [00:16<00:02,  2.04s/it]VAE decoding: 100%|██████████| 9/9 [00:18<00:00,  2.04s/it]VAE decoding: 100%|██████████| 9/9 [00:18<00:00,  2.06s/it]
+Saving video:   0%|          | 0/81 [00:00<?, ?it/s]Saving video:   1%|          | 1/81 [00:00<00:24,  3.30it/s]Saving video:  77%|███████▋  | 62/81 [00:00<00:00, 193.10it/s]Saving video: 100%|██████████| 81/81 [00:00<00:00, 184.34it/s]
+Saved /workspace/results/full_towel_50step_sdpa_contiguous/towel.mp4
+Saving video:   0%|          | 0/81 [00:00<?, ?it/s]Saving video:   1%|          | 1/81 [00:00<00:26,  2.97it/s]Saving video:  59%|█████▉    | 48/81 [00:00<00:00, 142.04it/s]Saving video: 100%|██████████| 81/81 [00:00<00:00, 162.15it/s]
+TIMED rc=0 wall=3872.9s peak_rss=7.59GiB
+/opt/venv/lib/python3.12/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/venv/lib/python3.12/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+MIOpen(HIP): Warning [ParseAndLoadDb] File is unreadable: "/opt/venv/lib/python3.12/site-packages/_rocm_sdk_libraries/share/miopen/db/gfx1100_48.HIP.fdb.txt"
+ours_vs_gt               PSNR  23.59  SSIM 0.887  LPIPS 0.1716
+upstream_vs_gt           PSNR  22.84  SSIM 0.876  LPIPS 0.1694
+ours_vs_upstream         PSNR  24.44  SSIM 0.901  LPIPS 0.1383
+static_reference_vs_gt   PSNR  20.02  SSIM 0.861  LPIPS 0.2487
+=== full_towel_50step_sdpa_contiguous done 2026-11-10T18:55:46+00:00
+VERIFY_FULL_OK

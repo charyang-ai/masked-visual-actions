@@ -1,0 +1,12 @@
+device AMD Radeon Pro W7900D torch 2.11.0+rocm7.14.0 hip 7.14.60850
+arch gfx1100
+flash_sdp_enabled True mem_efficient_sdp_enabled True
+small flash: max_abs_err 9.0292e-04
+small efficient: max_abs_err 9.0292e-04
+full flash: 392 ms/call, 61.5 TFLOPS, peak 1.41 GiB
+full efficient: 396 ms/call, 60.9 TFLOPS, peak 1.73 GiB
+full default_without_math: 401 ms/call, 60.1 TFLOPS, peak 1.41 GiB
+can_use_flash_attention True
+can_use_efficient_attention True
+gemm 34320x5120x13824: 91 ms, 53.3 TFLOPS
+PROBE_OK

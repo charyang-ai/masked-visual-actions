@@ -18,3 +18,12 @@ checkpoints/
 # OS / editor
 .DS_Store
 *.swp
+
+# Radeon port: local working files, and the blog draft (published in RoboGarden)
+_gen/
+BLOG.md
+
+# The small verification outputs are part of the record
+!results/**/*.mp4
+!results/**/*.png
+!results/**/*.jpg

@@ -1,0 +1,27 @@
+{
+ "cmd": [
+  "/workspace/venv/bin/python",
+  "inference/infer.py",
+  "--lora-high",
+  "/workspace/checkpoints/masked_world_lora_high.safetensors",
+  "--lora-low",
+  "/workspace/checkpoints/masked_world_lora_low.safetensors",
+  "--control-video",
+  "/workspace/data/samples/towel/control.mp4",
+  "--reference-image",
+  "/workspace/data/samples/towel/reference.png",
+  "--prompt",
+  "A robot arm picks up the towel and places it in the bowl.",
+  "--seed",
+  "123",
+  "--num-inference-steps",
+  "50",
+  "--low-vram",
+  "--save-inputs",
+  "--output",
+  "/workspace/results/full_towel_50step/towel.mp4"
+ ],
+ "returncode": 0,
+ "wall_s": 6817.5,
+ "peak_rss_gib": 7.58
+}

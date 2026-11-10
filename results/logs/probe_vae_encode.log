@@ -1,0 +1,32 @@
+To avoid repeatedly downloading model files, (PAI/Wan2.2-Fun-A14B-Control, Wan2.1_VAE.pth) is redirected to ('DiffSynth-Studio/Wan-Series-Converted-Safetensors', 'Wan2.1_VAE.safetensors'). You can use `redirect_common_files=False` to disable file redirection.
+Loading models from: "/workspace/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/Wan2.1_VAE.safetensors"
+Loaded model: {
+    "model_name": "wan_video_vae",
+    "model_class": "diffsynth.models.wan_video_vae.WanVideoVAE",
+    "extra_kwargs": null
+}
+No wan_video_text_encoder models available. This is not an error.
+No wan_video_dit models available. This is not an error.
+Using wan_video_vae from "/workspace/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/Wan2.1_VAE.safetensors".
+No wan_video_image_encoder models available. This is not an error.
+No wan_video_motion_controller models available. This is not an error.
+No wan_video_vace models available. This is not an error.
+No wan_video_vap models available. This is not an error.
+No wans2v_audio_encoder models available. This is not an error.
+No wan_video_animate_adapter models available. This is not an error.
+VAE encoding:   0%|          | 0/9 [00:00<?, ?it/s]MIOpen(HIP): Warning [ParseAndLoadDb] File is unreadable: "/opt/venv/lib/python3.12/site-packages/_rocm_sdk_libraries/share/miopen/db/gfx1100_48.HIP.fdb.txt"
+VAE encoding:  11%|█         | 1/9 [00:03<00:26,  3.27s/it]VAE encoding:  22%|██▏       | 2/9 [00:04<00:14,  2.06s/it]VAE encoding:  33%|███▎      | 3/9 [00:05<00:10,  1.67s/it]VAE encoding:  44%|████▍     | 4/9 [00:06<00:07,  1.51s/it]VAE encoding:  56%|█████▌    | 5/9 [00:08<00:05,  1.40s/it]VAE encoding:  67%|██████▋   | 6/9 [00:09<00:04,  1.34s/it]VAE encoding:  78%|███████▊  | 7/9 [00:10<00:02,  1.30s/it]VAE encoding:  89%|████████▉ | 8/9 [00:11<00:01,  1.27s/it]VAE encoding: 100%|██████████| 9/9 [00:13<00:00,  1.25s/it]VAE encoding: 100%|██████████| 9/9 [00:13<00:00,  1.45s/it]
+tiled encode, fused: attention calls=189 |ref|max=1.4 max_err=2.754e+01 nan=0 latents_nan=0
+VAE encoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE encoding:  11%|█         | 1/9 [00:01<00:09,  1.20s/it]VAE encoding:  22%|██▏       | 2/9 [00:02<00:08,  1.20s/it]VAE encoding:  33%|███▎      | 3/9 [00:03<00:07,  1.20s/it]VAE encoding:  44%|████▍     | 4/9 [00:04<00:05,  1.20s/it]VAE encoding:  56%|█████▌    | 5/9 [00:05<00:04,  1.20s/it]VAE encoding:  67%|██████▋   | 6/9 [00:07<00:03,  1.20s/it]VAE encoding:  78%|███████▊  | 7/9 [00:08<00:02,  1.20s/it]VAE encoding:  89%|████████▉ | 8/9 [00:09<00:01,  1.20s/it]VAE encoding: 100%|██████████| 9/9 [00:10<00:00,  1.20s/it]VAE encoding: 100%|██████████| 9/9 [00:10<00:00,  1.20s/it]
+tiled encode, fused vs math latents: max_abs=5.234e-01 mean_abs=7.498e-02 latent |max|=3.77
+VAE decoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE decoding:  11%|█         | 1/9 [00:02<00:16,  2.08s/it]VAE decoding:  22%|██▏       | 2/9 [00:04<00:14,  2.07s/it]VAE decoding:  33%|███▎      | 3/9 [00:06<00:12,  2.07s/it]VAE decoding:  44%|████▍     | 4/9 [00:08<00:10,  2.07s/it]VAE decoding:  56%|█████▌    | 5/9 [00:10<00:08,  2.07s/it]VAE decoding:  67%|██████▋   | 6/9 [00:12<00:06,  2.07s/it]VAE decoding:  78%|███████▊  | 7/9 [00:14<00:04,  2.07s/it]VAE decoding:  89%|████████▉ | 8/9 [00:16<00:02,  2.07s/it]VAE decoding: 100%|██████████| 9/9 [00:18<00:00,  2.07s/it]VAE decoding: 100%|██████████| 9/9 [00:18<00:00,  2.07s/it]
+tiled decode, fused: attention calls=189 |ref|max=1.9 max_err=1.453e+01 nan=0 pixels_nan=0
+VAE decoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE decoding:  11%|█         | 1/9 [00:02<00:16,  2.04s/it]VAE decoding:  22%|██▏       | 2/9 [00:04<00:14,  2.05s/it]VAE decoding:  33%|███▎      | 3/9 [00:06<00:12,  2.05s/it]VAE decoding:  44%|████▍     | 4/9 [00:08<00:10,  2.05s/it]VAE decoding:  56%|█████▌    | 5/9 [00:10<00:08,  2.05s/it]VAE decoding:  67%|██████▋   | 6/9 [00:12<00:06,  2.04s/it]VAE decoding:  78%|███████▊  | 7/9 [00:14<00:04,  2.05s/it]VAE decoding:  89%|████████▉ | 8/9 [00:16<00:02,  2.05s/it]VAE decoding: 100%|██████████| 9/9 [00:18<00:00,  2.05s/it]VAE decoding: 100%|██████████| 9/9 [00:18<00:00,  2.05s/it]
+tiled decode, fused vs math pixels: PSNR=40.69 dB max_abs=1.535e+00
+VAE decoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE decoding:  11%|█         | 1/9 [00:02<00:16,  2.03s/it]VAE decoding:  22%|██▏       | 2/9 [00:04<00:14,  2.04s/it]VAE decoding:  33%|███▎      | 3/9 [00:06<00:12,  2.04s/it]VAE decoding:  44%|████▍     | 4/9 [00:08<00:10,  2.04s/it]VAE decoding:  56%|█████▌    | 5/9 [00:10<00:08,  2.04s/it]VAE decoding:  67%|██████▋   | 6/9 [00:12<00:06,  2.04s/it]VAE decoding:  78%|███████▊  | 7/9 [00:14<00:04,  2.04s/it]VAE decoding:  89%|████████▉ | 8/9 [00:16<00:02,  2.04s/it]VAE decoding: 100%|██████████| 9/9 [00:18<00:00,  2.04s/it]VAE decoding: 100%|██████████| 9/9 [00:18<00:00,  2.04s/it]
+tiled encode+decode round trip vs input: fused 36.98 dB, math 37.97 dB
+untiled encode #0, fused: attention max_err=9.811e+00 nan=0 latents_nan=0
+untiled encode #1, fused: attention max_err=1.765e+01 nan=0 latents_nan=0
+untiled encode #2, fused: attention max_err=9.811e+00 nan=0 latents_nan=0
+untiled encode, math: latents_nan=0 vs tiled math max_abs=1.875e-01
+VAE_ENCODE_PROBE_OK

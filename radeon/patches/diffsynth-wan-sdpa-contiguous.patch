@@ -1,0 +1,18 @@
+diff --git a/diffsynth/models/wan_video_dit.py b/diffsynth/models/wan_video_dit.py
+index 7386223..27c9e43 100644
+--- a/diffsynth/models/wan_video_dit.py
++++ b/diffsynth/models/wan_video_dit.py
+@@ -53,9 +53,10 @@ def flash_attention(q: torch.Tensor, k: torch.Tensor, v: torch.Tensor, num_heads
+         x = sageattn(q, k, v)
+         x = rearrange(x, "b n s d -> b s (n d)", n=num_heads)
+     else:
+-        q = rearrange(q, "b s (n d) -> b n s d", n=num_heads)
+-        k = rearrange(k, "b s (n d) -> b n s d", n=num_heads)
+-        v = rearrange(v, "b s (n d) -> b n s d", n=num_heads)
++        # On ROCm (gfx1100) the SDPA flash kernel is ~3x slower on these strided views than on contiguous tensors.
++        q = rearrange(q, "b s (n d) -> b n s d", n=num_heads).contiguous()
++        k = rearrange(k, "b s (n d) -> b n s d", n=num_heads).contiguous()
++        v = rearrange(v, "b s (n d) -> b n s d", n=num_heads).contiguous()
+         x = F.scaled_dot_product_attention(q, k, v)
+         x = rearrange(x, "b n s d -> b s (n d)", n=num_heads)
+     return x

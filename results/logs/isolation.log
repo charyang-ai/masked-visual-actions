@@ -1,0 +1,2 @@
+devices=/dev/kfd /dev/dri/renderD135 
+torch 2.11.0+rocm7.14.0 hip 7.14.60850 devices 1 AMD Radeon Pro W7900D

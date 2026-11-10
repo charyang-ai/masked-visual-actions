@@ -1,0 +1,110 @@
+To avoid repeatedly downloading model files, (PAI/Wan2.2-Fun-A14B-Control, models_t5_umt5-xxl-enc-bf16.pth) is redirected to ('DiffSynth-Studio/Wan-Series-Converted-Safetensors', 'models_t5_umt5-xxl-enc-bf16.safetensors'). You can use `redirect_common_files=False` to disable file redirection.
+To avoid repeatedly downloading model files, (PAI/Wan2.2-Fun-A14B-Control, Wan2.1_VAE.pth) is redirected to ('DiffSynth-Studio/Wan-Series-Converted-Safetensors', 'Wan2.1_VAE.safetensors'). You can use `redirect_common_files=False` to disable file redirection.
+Loading models from: "/workspace/models/PAI/Wan2.2-Fun-A14B-Control/high_noise_model/diffusion_pytorch_model.safetensors"
+Loaded model: {
+    "model_name": "wan_video_dit",
+    "model_class": "diffsynth.models.wan_video_dit.WanModel",
+    "extra_kwargs": {
+        "has_image_input": false,
+        "patch_size": [
+            1,
+            2,
+            2
+        ],
+        "in_dim": 52,
+        "dim": 5120,
+        "ffn_dim": 13824,
+        "freq_dim": 256,
+        "text_dim": 4096,
+        "out_dim": 16,
+        "num_heads": 40,
+        "num_layers": 40,
+        "eps": 1e-06,
+        "has_ref_conv": true,
+        "require_clip_embedding": false
+    }
+}
+Loading models from: "/workspace/models/PAI/Wan2.2-Fun-A14B-Control/low_noise_model/diffusion_pytorch_model.safetensors"
+Loaded model: {
+    "model_name": "wan_video_dit",
+    "model_class": "diffsynth.models.wan_video_dit.WanModel",
+    "extra_kwargs": {
+        "has_image_input": false,
+        "patch_size": [
+            1,
+            2,
+            2
+        ],
+        "in_dim": 52,
+        "dim": 5120,
+        "ffn_dim": 13824,
+        "freq_dim": 256,
+        "text_dim": 4096,
+        "out_dim": 16,
+        "num_heads": 40,
+        "num_layers": 40,
+        "eps": 1e-06,
+        "has_ref_conv": true,
+        "require_clip_embedding": false
+    }
+}
+Loading models from: "/workspace/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/models_t5_umt5-xxl-enc-bf16.safetensors"
+Loaded model: {
+    "model_name": "wan_video_text_encoder",
+    "model_class": "diffsynth.models.wan_video_text_encoder.WanTextEncoder",
+    "extra_kwargs": null
+}
+Loading models from: "/workspace/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/Wan2.1_VAE.safetensors"
+Loaded model: {
+    "model_name": "wan_video_vae",
+    "model_class": "diffsynth.models.wan_video_vae.WanVideoVAE",
+    "extra_kwargs": null
+}
+Using wan_video_text_encoder from "/workspace/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/models_t5_umt5-xxl-enc-bf16.safetensors".
+More than one wan_video_dit models are loaded: ['/workspace/models/PAI/Wan2.2-Fun-A14B-Control/high_noise_model/diffusion_pytorch_model.safetensors', '/workspace/models/PAI/Wan2.2-Fun-A14B-Control/low_noise_model/diffusion_pytorch_model.safetensors']. Using wan_video_dit from [
+    "/workspace/models/PAI/Wan2.2-Fun-A14B-Control/high_noise_model/diffusion_pytorch_model.safetensors",
+    "/workspace/models/PAI/Wan2.2-Fun-A14B-Control/low_noise_model/diffusion_pytorch_model.safetensors"
+].
+Using wan_video_vae from "/workspace/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/Wan2.1_VAE.safetensors".
+No wan_video_image_encoder models available. This is not an error.
+No wan_video_motion_controller models available. This is not an error.
+No wan_video_vace models available. This is not an error.
+No wan_video_vap models available. This is not an error.
+No wans2v_audio_encoder models available. This is not an error.
+No wan_video_animate_adapter models available. This is not an error.
+400 tensors are patched by LoRA. You can use `pipe.clear_lora()` to clear all LoRA layers.
+400 tensors are patched by LoRA. You can use `pipe.clear_lora()` to clear all LoRA layers.
+VAE encoding:   0%|          | 0/9 [00:00<?, ?it/s]MIOpen(HIP): Warning [ParseAndLoadDb] File is unreadable: "/opt/venv/lib/python3.12/site-packages/_rocm_sdk_libraries/share/miopen/db/gfx1100_48.HIP.fdb.txt"
+VAE encoding:  11%|█         | 1/9 [00:02<00:22,  2.78s/it]VAE encoding:  22%|██▏       | 2/9 [00:03<00:12,  1.84s/it]VAE encoding:  33%|███▎      | 3/9 [00:05<00:09,  1.54s/it]VAE encoding:  44%|████▍     | 4/9 [00:06<00:07,  1.40s/it]VAE encoding:  56%|█████▌    | 5/9 [00:07<00:05,  1.33s/it]VAE encoding:  67%|██████▋   | 6/9 [00:08<00:03,  1.28s/it]VAE encoding:  78%|███████▊  | 7/9 [00:09<00:02,  1.26s/it]VAE encoding:  89%|████████▉ | 8/9 [00:11<00:01,  1.26s/it]VAE encoding: 100%|██████████| 9/9 [00:12<00:00,  1.27s/it]VAE encoding: 100%|██████████| 9/9 [00:12<00:00,  1.39s/it]
+  0%|          | 0/2 [00:00<?, ?it/s]forward {'index': 0, 'timestep': 1000.0, 'seconds': 78.21, 'vram_gib': 31.85}
+/opt/venv/lib/python3.12/site-packages/torch/profiler/profiler.py:224: UserWarning: Warning: Profiler clears events at the end of each cycle.Only events from the current cycle will be reported.To keep events across cycles, set acc_events=True.
+  _warn_once(
+[W1110 19:10:10.146665915 collection.cpp:1148] Warning: ROCTracer produced duplicate flow start: 1 (function operator())
+forward {'index': 1, 'timestep': 1000.0, 'seconds': 67.48, 'vram_gib': 31.85}
+ 50%|█████     | 1/2 [02:25<02:25, 145.69s/it]forward {'index': 2, 'timestep': 832.0, 'seconds': 79.41, 'vram_gib': 31.86}
+forward {'index': 3, 'timestep': 832.0, 'seconds': 67.99, 'vram_gib': 31.86}
+100%|██████████| 2/2 [04:53<00:00, 146.74s/it]100%|██████████| 2/2 [04:53<00:00, 146.58s/it]
+VAE decoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE decoding:  11%|█         | 1/9 [00:02<00:17,  2.15s/it]VAE decoding:  22%|██▏       | 2/9 [00:04<00:14,  2.08s/it]VAE decoding:  33%|███▎      | 3/9 [00:06<00:12,  2.06s/it]VAE decoding:  44%|████▍     | 4/9 [00:08<00:10,  2.05s/it]VAE decoding:  56%|█████▌    | 5/9 [00:10<00:08,  2.04s/it]VAE decoding:  67%|██████▋   | 6/9 [00:12<00:06,  2.04s/it]VAE decoding:  78%|███████▊  | 7/9 [00:14<00:04,  2.04s/it]VAE decoding:  89%|████████▉ | 8/9 [00:16<00:02,  2.04s/it]VAE decoding: 100%|██████████| 9/9 [00:18<00:00,  2.04s/it]VAE decoding: 100%|██████████| 9/9 [00:18<00:00,  2.05s/it]
+{
+ "profiled_forward_kernel_s": 67.34,
+ "kernels_by_category_s": {
+  "attention": 48.22,
+  "gemm": 15.99,
+  "copy/cast": 1.85,
+  "elementwise": 1.17,
+  "norm": 0.1,
+  "other": 0.0
+ }
+}
+  48.221s    80  attention   attn_fwd
+  11.137s   280  gemm        Cijk_Alik_Bljk_BBS_BH_MT128x128x16_MI16x16x16x1_SN_1LDSB0_AMAS3_BL1_BS1_EPS1_GLVWA8_GLVWB8_GRVW8_GSU1_GSUASB_I
+   3.462s    40  gemm        Cijk_Alik_Bljk_BBS_BH_MT128x128x16_MI16x16x16x1_SN_1LDSB0_AMAS3_BL1_BS1_EPS1_GLVWA4_GLVWB4_GRVW4_GSU1_GSUASB_I
+   0.732s   560  elementwise void at::native::vectorized_elementwise_kernel<8, at::native::CUDAFunctor_add<c10::BFloat16>, std::array<char*
+   0.590s   280  gemm        Cijk_Alik_Bljk_BBS_BH_MT128x128x16_MI16x16x16x1_SN_1LDSB0_AMAS3_BL1_BS1_EPS1_GLVWA8_GLVWB8_GRVW8_GSU1_GSUASB_I
+   0.532s   320  gemm        Cijk_Alik_Bljk_BBS_BH_MT128x128x16_MI16x16x16x1_SN_1LDSB0_AMAS3_BL1_BS1_EPS1_GLVWA4_GLVWB4_GRVW4_GSU1_GSUASB_I
+   0.320s    80  copy/cast   void at::native::elementwise_kernel_manual_unroll<128, 4, at::native::gpu_kernel_impl_nocast<at::native::Binar
+   0.259s   321  copy/cast   void at::native::elementwise_kernel_manual_unroll<128, 8, at::native::gpu_kernel_impl_nocast<at::native::Binar
+   0.239s   405  copy/cast   void at::native::elementwise_kernel_manual_unroll<128, 8, at::native::gpu_kernel_impl_nocast<at::native::direc
+   0.224s    40  gemm        Cijk_Alik_Bljk_BBS_BH_MT128x128x16_MI16x16x16x1_SN_1LDSB0_AMAS3_BL1_BS1_EPS1_GLVWA8_GLVWB8_GRVW8_GSU1_GSUASB_I
+   0.223s   160  elementwise void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_
+   0.212s   160  copy/cast   void at::native::elementwise_kernel_manual_unroll<128, 4, at::native::gpu_kernel_impl_nocast<at::native::Binar

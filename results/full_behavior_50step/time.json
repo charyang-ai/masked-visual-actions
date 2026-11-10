@@ -1,0 +1,27 @@
+{
+ "cmd": [
+  "/workspace/venv/bin/python",
+  "inference/infer.py",
+  "--lora-high",
+  "/workspace/checkpoints/masked_world_lora_high.safetensors",
+  "--lora-low",
+  "/workspace/checkpoints/masked_world_lora_low.safetensors",
+  "--control-video",
+  "/workspace/data/samples/behavior/control.mp4",
+  "--reference-image",
+  "/workspace/data/samples/behavior/reference.png",
+  "--prompt",
+  "A humanoid robot reaches into the open fridge in a kitchen.",
+  "--seed",
+  "456",
+  "--num-inference-steps",
+  "50",
+  "--low-vram",
+  "--save-inputs",
+  "--output",
+  "/workspace/results/full_behavior_50step/behavior.mp4"
+ ],
+ "returncode": 0,
+ "wall_s": 6815.8,
+ "peak_rss_gib": 7.59
+}

@@ -1,0 +1,5 @@
+torch 2.11.0+rocm7.14.0 hip 7.14.60850 devices 1 AMD Radeon Pro W7900D
+transformers 4.57.6 peft 0.21.2 accelerate 1.15.0 modelscope 1.40.3
+diffsynth /workspace/DiffSynth-Studio/diffsynth/__init__.py
+attention fallbacks: fa3 False fa2 False sage False
+SETUP_OK

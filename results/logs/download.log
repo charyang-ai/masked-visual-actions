@@ -1,0 +1,18 @@
+have /disk/ssd2/radeon/masked-visual-actions/models/PAI/Wan2.2-Fun-A14B-Control/configuration.json
+have /disk/ssd2/radeon/masked-visual-actions/models/PAI/Wan2.2-Fun-A14B-Control/high_noise_model/config.json
+have /disk/ssd2/radeon/masked-visual-actions/models/PAI/Wan2.2-Fun-A14B-Control/low_noise_model/config.json
+have /disk/ssd2/radeon/masked-visual-actions/models/Wan-AI/Wan2.1-T2V-1.3B/google/umt5-xxl/special_tokens_map.json
+have /disk/ssd2/radeon/masked-visual-actions/models/Wan-AI/Wan2.1-T2V-1.3B/google/umt5-xxl/spiece.model
+have /disk/ssd2/radeon/masked-visual-actions/models/Wan-AI/Wan2.1-T2V-1.3B/google/umt5-xxl/tokenizer.json
+have /disk/ssd2/radeon/masked-visual-actions/models/Wan-AI/Wan2.1-T2V-1.3B/google/umt5-xxl/tokenizer_config.json
+have /disk/ssd2/radeon/masked-visual-actions/models/PAI/Wan2.2-Fun-A14B-Control/Wan2.1_VAE.pth
+ok /disk/ssd2/radeon/masked-visual-actions/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/Wan2.1_VAE.safetensors 253806246
+have /disk/ssd2/radeon/masked-visual-actions/models/PAI/Wan2.2-Fun-A14B-Control/high_noise_model/diffusion_pytorch_model.safetensors
+have /disk/ssd2/radeon/masked-visual-actions/models/PAI/Wan2.2-Fun-A14B-Control/low_noise_model/diffusion_pytorch_model.safetensors
+have /disk/ssd2/radeon/masked-visual-actions/checkpoints/masked_world_lora_high.safetensors
+have /disk/ssd2/radeon/masked-visual-actions/models/PAI/Wan2.2-Fun-A14B-Control/models_t5_umt5-xxl-enc-bf16.pth
+have /disk/ssd2/radeon/masked-visual-actions/checkpoints/masked_world_lora_low.safetensors
+ok /disk/ssd2/radeon/masked-visual-actions/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/models_t5_umt5-xxl-enc-bf16.safetensors 11361845432
+76G	/disk/ssd2/radeon/masked-visual-actions/models
+4.6G	/disk/ssd2/radeon/masked-visual-actions/checkpoints
+DOWNLOAD_OK 325s

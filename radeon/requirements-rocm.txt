@@ -1,0 +1,18 @@
+# DiffSynth-Studio's runtime deps minus torch/torchvision, which come from the ROCm image.
+transformers>=4.46,<5
+imageio
+imageio[ffmpeg]
+safetensors
+einops
+sentencepiece
+protobuf
+modelscope
+ftfy
+pandas
+accelerate
+peft
+datasets
+huggingface_hub
+# radeon/metrics.py
+opencv-python-headless
+lpips

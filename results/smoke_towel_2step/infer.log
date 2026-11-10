@@ -1,0 +1,84 @@
+To avoid repeatedly downloading model files, (PAI/Wan2.2-Fun-A14B-Control, models_t5_umt5-xxl-enc-bf16.pth) is redirected to ('DiffSynth-Studio/Wan-Series-Converted-Safetensors', 'models_t5_umt5-xxl-enc-bf16.safetensors'). You can use `redirect_common_files=False` to disable file redirection.
+To avoid repeatedly downloading model files, (PAI/Wan2.2-Fun-A14B-Control, Wan2.1_VAE.pth) is redirected to ('DiffSynth-Studio/Wan-Series-Converted-Safetensors', 'Wan2.1_VAE.safetensors'). You can use `redirect_common_files=False` to disable file redirection.
+Loading models from: "/workspace/models/PAI/Wan2.2-Fun-A14B-Control/high_noise_model/diffusion_pytorch_model.safetensors"
+Loaded model: {
+    "model_name": "wan_video_dit",
+    "model_class": "diffsynth.models.wan_video_dit.WanModel",
+    "extra_kwargs": {
+        "has_image_input": false,
+        "patch_size": [
+            1,
+            2,
+            2
+        ],
+        "in_dim": 52,
+        "dim": 5120,
+        "ffn_dim": 13824,
+        "freq_dim": 256,
+        "text_dim": 4096,
+        "out_dim": 16,
+        "num_heads": 40,
+        "num_layers": 40,
+        "eps": 1e-06,
+        "has_ref_conv": true,
+        "require_clip_embedding": false
+    }
+}
+Loading models from: "/workspace/models/PAI/Wan2.2-Fun-A14B-Control/low_noise_model/diffusion_pytorch_model.safetensors"
+Loaded model: {
+    "model_name": "wan_video_dit",
+    "model_class": "diffsynth.models.wan_video_dit.WanModel",
+    "extra_kwargs": {
+        "has_image_input": false,
+        "patch_size": [
+            1,
+            2,
+            2
+        ],
+        "in_dim": 52,
+        "dim": 5120,
+        "ffn_dim": 13824,
+        "freq_dim": 256,
+        "text_dim": 4096,
+        "out_dim": 16,
+        "num_heads": 40,
+        "num_layers": 40,
+        "eps": 1e-06,
+        "has_ref_conv": true,
+        "require_clip_embedding": false
+    }
+}
+Loading models from: "/workspace/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/models_t5_umt5-xxl-enc-bf16.safetensors"
+Loaded model: {
+    "model_name": "wan_video_text_encoder",
+    "model_class": "diffsynth.models.wan_video_text_encoder.WanTextEncoder",
+    "extra_kwargs": null
+}
+Loading models from: "/workspace/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/Wan2.1_VAE.safetensors"
+Loaded model: {
+    "model_name": "wan_video_vae",
+    "model_class": "diffsynth.models.wan_video_vae.WanVideoVAE",
+    "extra_kwargs": null
+}
+Using wan_video_text_encoder from "/workspace/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/models_t5_umt5-xxl-enc-bf16.safetensors".
+More than one wan_video_dit models are loaded: ['/workspace/models/PAI/Wan2.2-Fun-A14B-Control/high_noise_model/diffusion_pytorch_model.safetensors', '/workspace/models/PAI/Wan2.2-Fun-A14B-Control/low_noise_model/diffusion_pytorch_model.safetensors']. Using wan_video_dit from [
+    "/workspace/models/PAI/Wan2.2-Fun-A14B-Control/high_noise_model/diffusion_pytorch_model.safetensors",
+    "/workspace/models/PAI/Wan2.2-Fun-A14B-Control/low_noise_model/diffusion_pytorch_model.safetensors"
+].
+Using wan_video_vae from "/workspace/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/Wan2.1_VAE.safetensors".
+No wan_video_image_encoder models available. This is not an error.
+No wan_video_motion_controller models available. This is not an error.
+No wan_video_vace models available. This is not an error.
+No wan_video_vap models available. This is not an error.
+No wans2v_audio_encoder models available. This is not an error.
+No wan_video_animate_adapter models available. This is not an error.
+400 tensors are patched by LoRA. You can use `pipe.clear_lora()` to clear all LoRA layers.
+400 tensors are patched by LoRA. You can use `pipe.clear_lora()` to clear all LoRA layers.
+VAE encoding:   0%|          | 0/9 [00:00<?, ?it/s]MIOpen(HIP): Warning [ParseAndLoadDb] File is unreadable: "/opt/venv/lib/python3.12/site-packages/_rocm_sdk_libraries/share/miopen/db/gfx1100_48.HIP.fdb.txt"
+VAE encoding:  11%|█         | 1/9 [00:09<01:13,  9.19s/it]VAE encoding:  22%|██▏       | 2/9 [00:10<00:31,  4.49s/it]VAE encoding:  33%|███▎      | 3/9 [00:11<00:17,  2.98s/it]VAE encoding:  44%|████▍     | 4/9 [00:12<00:11,  2.27s/it]VAE encoding:  56%|█████▌    | 5/9 [00:13<00:07,  1.88s/it]VAE encoding:  67%|██████▋   | 6/9 [00:15<00:04,  1.64s/it]VAE encoding:  78%|███████▊  | 7/9 [00:16<00:02,  1.49s/it]VAE encoding:  89%|████████▉ | 8/9 [00:17<00:01,  1.40s/it]VAE encoding: 100%|██████████| 9/9 [00:18<00:00,  1.33s/it]VAE encoding: 100%|██████████| 9/9 [00:18<00:00,  2.08s/it]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [01:19<01:19, 79.71s/it]100%|██████████| 2/2 [03:47<00:00, 119.76s/it]100%|██████████| 2/2 [03:47<00:00, 113.75s/it]
+VAE decoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE decoding:  11%|█         | 1/9 [00:02<00:23,  2.98s/it]VAE decoding:  22%|██▏       | 2/9 [00:05<00:17,  2.43s/it]VAE decoding:  33%|███▎      | 3/9 [00:07<00:13,  2.25s/it]VAE decoding:  44%|████▍     | 4/9 [00:09<00:10,  2.17s/it]VAE decoding:  56%|█████▌    | 5/9 [00:11<00:08,  2.13s/it]VAE decoding:  67%|██████▋   | 6/9 [00:13<00:06,  2.10s/it]VAE decoding:  78%|███████▊  | 7/9 [00:15<00:04,  2.10s/it]VAE decoding:  89%|████████▉ | 8/9 [00:17<00:02,  2.08s/it]VAE decoding: 100%|██████████| 9/9 [00:19<00:00,  2.07s/it]VAE decoding: 100%|██████████| 9/9 [00:19<00:00,  2.15s/it]
+Saving video:   0%|          | 0/81 [00:00<?, ?it/s]Saving video:   1%|          | 1/81 [00:00<00:23,  3.36it/s]Saving video:  77%|███████▋  | 62/81 [00:00<00:00, 193.02it/s]Saving video: 100%|██████████| 81/81 [00:00<00:00, 185.27it/s]
+Saved /workspace/results/smoke_towel_2step/towel.mp4
+Saving video:   0%|          | 0/81 [00:00<?, ?it/s]Saving video:   1%|          | 1/81 [00:00<00:22,  3.55it/s]Saving video:  65%|██████▌   | 53/81 [00:00<00:00, 177.04it/s]Saving video: 100%|██████████| 81/81 [00:00<00:00, 188.50it/s]
+TIMED rc=0 wall=350.6s peak_rss=8.00GiB

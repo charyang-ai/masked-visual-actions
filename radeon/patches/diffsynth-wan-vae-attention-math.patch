@@ -1,0 +1,33 @@
+diff --git a/diffsynth/models/wan_video_vae.py b/diffsynth/models/wan_video_vae.py
+index d24e29d..0f557ac 100644
+--- a/diffsynth/models/wan_video_vae.py
++++ b/diffsynth/models/wan_video_vae.py
+@@ -3,6 +3,7 @@ from einops import rearrange, repeat
+ import torch
+ import torch.nn as nn
+ import torch.nn.functional as F
++from torch.nn.attention import SDPBackend, sdpa_kernel
+ from tqdm import tqdm
+ 
+ CACHE_T = 2
+@@ -328,12 +329,14 @@ class AttentionBlock(nn.Module):
+             0, 1, 3, 2).contiguous().chunk(3, dim=-1)
+ 
+         # apply attention
+-        x = F.scaled_dot_product_attention(
+-            q,
+-            k,
+-            v,
+-            #attn_mask=block_causal_mask(q, block_size=h * w)
+-        )
++        # On ROCm (gfx1100) the fused SDPA kernels return wrong values at this head size (384), so use the exact one.
++        with sdpa_kernel([SDPBackend.MATH]):
++            x = F.scaled_dot_product_attention(
++                q,
++                k,
++                v,
++                #attn_mask=block_causal_mask(q, block_size=h * w)
++            )
+         x = x.squeeze(1).permute(0, 2, 1).reshape(b * t, c, h, w)
+ 
+         # output
